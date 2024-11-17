@@ -34,20 +34,27 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- YOUR CODE -->
+                <?php foreach ($data as $row){?>
+                <tr>
+                    <td><?= $row[0] ?></td>
+                    <td><?= $row[1] ?></td>
+                    <td><?= $row[2] ?></td>
+                    <td><?= $row[3] ?></td>
+                </tr>
+                <?php }?>
             </tbody>
             <tfoot>
                 <tr>
                     <th colspan="3">Total Income:</th>
-                    <td><!-- YOUR CODE --></td>
+                    <td><?= $income ?></td>
                 </tr>
                 <tr>
                     <th colspan="3">Total Expense:</th>
-                    <td><!-- YOUR CODE --></td>
+                    <td><?= -$expenses ?></td>
                 </tr>
                 <tr>
                     <th colspan="3">Net Total:</th>
-                    <td><!-- YOUR CODE --></td>
+                    <td><?= $total ?></td>
                 </tr>
             </tfoot>
         </table>
